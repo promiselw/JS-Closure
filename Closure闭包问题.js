@@ -38,7 +38,7 @@ function addMethod2() {
   //全局对象中
   add1 = function() {
     num = 250;       //此时的变量时该函数自己拥有的变量
-    num++;           //引入外部变量num
+    num++;
   };
   return function answer() {
     console.log(num);
@@ -62,7 +62,7 @@ function addMethod3() {
   //全局对象中
   add1 = function() {
     num = 250;       //此时的变量时该函数自己拥有的变量
-    num++;           //引入外部变量num
+    num++;
   };
 
   add1();
