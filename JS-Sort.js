@@ -27,6 +27,36 @@ var arr = [,1,5,6,3];
 console.log(insertSort(arr));
 var arr1 = arr.splice(0,1);  //q切割掉第一个数组元素
 console.log(arr);   //结果:[1,3,5,6]
+
+/*js实现数组的排序:希尔排序
+  时间复杂度：O[n^3/2];
+*/
+
+function shellSort(arr){
+
+  var i;
+  var j;
+  var temp;  //临时存放元素
+  var gap = arr.length;
+  do{
+    gap = parseInt(gap/3)+1;
+    for(i=gap; i < arr.length; i++){
+      if(arr[i] < arr[i-gap]){
+        temp = arr[i];
+        for(j=i-gap; arr[j]>temp;j-=gap){
+          arr[j+gap] = arr[j]
+        }
+        arr[j+gap] = temp;
+      }
+    }
+  }while(gap>1);
+  return arr;
+}
+//测试
+var arr = [5, 2, 6, 0, 3, 9, 1, 7, 4, 8];
+var arr2 = shellSort(arr);
+console.log(arr2);
+
 /*
   冒泡排序：自顶向下冒泡
   时间复杂度：O[n^2]
