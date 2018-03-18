@@ -30,6 +30,7 @@ console.log(arr);   //结果:[1,3,5,6]
 
 /*js实现数组的排序:希尔排序
   时间复杂度：O[n^3/2];
+  插入排序的基础上改造
 */
 
 function shellSort(arr){
