@@ -1,5 +1,7 @@
 
-
+/*
+   运行环境：node
+ */
 
 var readLine = require('readline');
 
@@ -8,7 +10,7 @@ var read = readLine.createInterface({
   output:process.stdout
 });
 
-console.log('请输入你的歌曲数，每首歌的时间长度以及每张CD的容量:');
+console.log('请输入你的歌曲数，每首歌的时间长度以及每张CD的容量(中间用空格间隔):');
 
 read.on('line',function(str) {
       //将str转换为数组
